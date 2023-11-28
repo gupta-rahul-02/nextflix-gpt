@@ -90,4 +90,11 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/t
 - BugFix - if user is signed in redirect to browse page if not redirect to login page 
 - Unsubscribed to the onAuthChanged callback
 - - Fetch From TMDB Movies
-- Add constant file
+- Add constant file\
+- create custom hook for now playing movie
+- create movie slice
+- planning for main and secondary container
+- fetch data for trailer video 
+- update store with trailer video data
+- embed youtube video and make it autoplay and mute
+- addition of tailwind class to main container

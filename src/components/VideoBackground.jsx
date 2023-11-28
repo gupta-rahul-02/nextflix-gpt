@@ -1,14 +1,11 @@
 import React, { useEffect } from "react";
 import { API_OPTIONS } from "../utils/constants";
-import {useDispatch, useSelector} from 'react-redux'
+import { useDispatch, useSelector } from "react-redux";
 import { addTrailer } from "../utils/moviesSlice";
 
-
 function VideoBackground({ id }) {
-  
-  const dispatch = useDispatch()
-  const trailerVid = useSelector((store) => store.movies?.trailer)
-  
+  const dispatch = useDispatch();
+  const trailerVid = useSelector((store) => store.movies?.trailer);
 
   const getMovieTrailer = async () => {
     const data = await fetch(
@@ -16,26 +13,21 @@ function VideoBackground({ id }) {
       API_OPTIONS
     );
     const json = await data.json();
-    
 
     const filterData = json.results.filter((video) => video.type === "Trailer");
     const trailer = filterData.length ? filterData[0] : json.results[0];
-    dispatch(addTrailer(trailer))
-    
+    dispatch(addTrailer(trailer));
   };
   useEffect(() => {
     getMovieTrailer();
   }, []);
   return (
-    <div>
+    <div className="w-screen">
       <iframe
-        width="560"
-        height="315"
-        src={"https://www.youtube.com/embed/"+trailerVid?.key}
+        className="w-screen aspect-video"
+        src={"https://www.youtube.com/embed/" + trailerVid?.key + "?&autoplay=1&mute=1"}
         title="YouTube video player"
-        
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-        
       ></iframe>
     </div>
   );
