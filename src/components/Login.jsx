@@ -44,11 +44,14 @@ const Login = () => {
       )
         .then((userCredential) => {
           const user = userCredential.user;
+      console.log(user)
           updateProfile(user, {
             displayName: name.current.value,
             photoURL: {USER_AVATAR},
           })
             .then(() => {
+              const user2 = auth.currentUser
+              console.log(user2)
                 const {uid,email,displayName,photoURL} = auth.currentUser
                 dispatch(addUser({
                     uid: uid,

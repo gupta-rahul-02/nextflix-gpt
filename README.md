@@ -90,3 +90,4 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/t
 - BugFix - if user is signed in redirect to browse page if not redirect to login page 
 - Unsubscribed to the onAuthChanged callback
 - - Fetch From TMDB Movies
+- Add constant file
