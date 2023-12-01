@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { API_OPTIONS } from "../utils/constants";
 import { useDispatch, useSelector } from "react-redux";
 import { addTrailer } from "../utils/moviesSlice";
@@ -6,6 +6,7 @@ import { addTrailer } from "../utils/moviesSlice";
 function VideoBackground({ id }) {
   const dispatch = useDispatch();
   const trailerVid = useSelector((store) => store.movies?.trailer);
+ 
 
   const getMovieTrailer = async () => {
     const data = await fetch(
@@ -17,12 +18,13 @@ function VideoBackground({ id }) {
     const filterData = json.results.filter((video) => video.type === "Trailer");
     const trailer = filterData.length ? filterData[0] : json.results[0];
     dispatch(addTrailer(trailer));
+    
   };
   useEffect(() => {
     getMovieTrailer();
   }, []);
   return (
-    <div className="w-screen">
+    <div className="w-screen ">
       <iframe
         className="w-screen aspect-video"
         src={"https://www.youtube.com/embed/" + trailerVid?.key + "?&autoplay=1&mute=1"}
