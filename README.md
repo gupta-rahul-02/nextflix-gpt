@@ -98,3 +98,10 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/t
 - update store with trailer video data
 - embed youtube video and make it autoplay and mute
 - addition of tailwind class to main container
+
+- created gpt search bar
+- created gpt search page
+- integrated ope ai account for gpt search
+- fetched movies according to the request of user with gpt
+- added movie result to store
+- fetched movie data from tmdb and added to store

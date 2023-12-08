@@ -23,3 +23,6 @@ export const SUPPORTED_LANGS = [
   { identifier: "hind", name: "Hindi" },
   { identifier: "fr", name: "French" },
 ];
+
+
+export const OPENAI_GPT_KEY = "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"
