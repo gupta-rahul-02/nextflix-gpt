@@ -9,7 +9,7 @@ export const API_OPTIONS = {
   headers: {
     accept: "application/json",
     Authorization:
-      "Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiJhYTMwNjVmNjRiNTVjMWY2N2QwZDRmNDRmMDI0ZDUxMSIsInN1YiI6IjY1NWRlNmNiMjY2Nzc4MDE0ZTk0NzI5OSIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.itdF-sARw9TNYQaki6_j5BcpZ8PQPoyOHjwNUkfqrdE",
+      "Bearer "+process.env.REACT_APP_API_OPTIONS,
   },
 };
 
@@ -25,4 +25,4 @@ export const SUPPORTED_LANGS = [
 ];
 
 
-export const OPENAI_GPT_KEY = "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"
+export const OPENAI_GPT_KEY = process.env.REACT_APP_OPENAI_GPT_KEY
