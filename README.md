@@ -101,7 +101,11 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/t
 
 - created gpt search bar
 - created gpt search page
-- integrated ope ai account for gpt search
+- integrated open ai account for gpt search
 - fetched movies according to the request of user with gpt
 - added movie result to store
 - fetched movie data from tmdb and added to store
+- memoization
+
+- adding .env file
+- made site responsive
