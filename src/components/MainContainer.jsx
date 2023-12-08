@@ -16,7 +16,7 @@ function MainContainer() {
   return (
    
     <>
-     <div>
+     <div className='pt-[30%] bg-black md:pt-0'>
      <VideoTitle title = {mainMovie.original_title} overview= {mainMovie.overview}/>
      <VideoBackground id={mainMovie.id}/>
      </div>

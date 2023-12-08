@@ -60,9 +60,9 @@ const Header = () => {
   return (
     <>
       <div className="absolute w-screen px-8 py-2 bg-gradient-to-b from-black z-10 flex flex-col md:flex-row justify-between ">
-        <img className="w-44" src={LOGO} alt="logo" />
+        <img className="w-44 mx-auto md:mx-0" src={LOGO} alt="logo" />
         {user && (
-          <div className="flex p-2">
+          <div className="flex p-2 justify-between">
             {
               showGPTSearchButton && 
               <select
@@ -78,7 +78,7 @@ const Header = () => {
             }
             
             <button
-              className="text-white bg-purple-400 mr-2 p-1 m-1 "
+              className="text-white bg-purple-400 mr-2 p-1 m-1 mb-3 "
               onClick={handleGPTEngine}
             >{
               showGPTSearchButton ? lang[langKey].home : lang[langKey].gpt_search
@@ -86,7 +86,7 @@ const Header = () => {
              
             </button>
             <img
-              className="w-12 h-12 mt-1 mr-1"
+              className="md:block hidden w-10 h-10 mt-1 mr-1"
               src="https://wallpapers.com/images/hd/netflix-profile-pictures-1000-x-1000-qo9h82134t9nv0j0.jpg"
               //src={user?.photoURL}
               alt="usericon"
