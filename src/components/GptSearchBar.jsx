@@ -29,11 +29,10 @@ function GptSearchBar() {
     // if(!gptResults){TODO: "Write Error Handling"}
     //console.log(gptResults.choices?.[0]?.message?.content.split(","));
     const gptResultsArray = gptResults.choices?.[0]?.message?.content.split(",")
-    console.log(gptResultsArray)
+
     const promiseArray = gptResultsArray.map((movie) => searchMovieTMDB(movie))
     const tmdbResults = await Promise.all(promiseArray)
     dispatch(addGPTMovies({movieNames: gptResultsArray , movieResults: tmdbResults}))
-    console.log(tmdbResults)
   };
 
   return (
